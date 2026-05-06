@@ -23,10 +23,12 @@ phases:
 
   build:
     commands:
-      - 'echo "🛠️ build 단계 시작"'
+      - echo "🛠️ 빌드 전 현재 경로 파일 목록:"
+      - ls -al
+      - echo "🛠️ build 시작"
       - npm run build
-      - 'echo "dist 폴더 확인"'
-      - ls -al dist
+      - echo "🛠️ build 직후 결과 확인:"
+      - ls -al
 
   post_build:
     commands:
